@@ -4,7 +4,7 @@ recipe = Blueprint("recipe", __name__, template_folder="templates")
 
 @recipe.route("/")
 def display_recipe():
-    return render_template("recipe.html")
+    return render_template("recipe.html", display_form=True)
 
 app = Flask(__name__)
 app.register_blueprint(recipe, url_prefix="/")

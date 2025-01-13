@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guacamole 💚</title>
+    <title>Guacamole Recipe 💚</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,9 +51,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>🥑 Best Guacamole Recipe 🥗</h1>
+        <h1>🥑 Avocadorable Guacamole 🥗</h1>
         <p>This recipe is perfect for fresh, homemade guacamole 😋🤤😍</p>
 
+        {% if display_form %}
         <form method="GET">
             <p>Select the number of servings to see the appropriate proportions of ingredients.</p>
             <label for="portions">Servings:</label>
@@ -65,6 +66,7 @@
             </select>
             <button type="submit">Submit ✅</button>
         </form>
+        {% endif %}
 
         <div class="ingredients">
             <h2>Ingredients:</h2>
