@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guacamole 💚</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #a7e08a;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .container {
+            background: #82be77;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label, p {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        select, button {
+            padding: 8px 12px;
+            margin-top: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #ecf0f1;
+        }
+        .ingredients {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🥑 Best Guacamole Recipe 🥗</h1>
+        <p>This recipe is perfect for fresh, homemade guacamole 😋🤤😍</p>
+
+        <form method="GET">
+            <p>Select the number of servings to see the appropriate proportions of ingredients.</p>
+            <label for="portions">Servings:</label>
+            <select name="portions" id="portions">
+                <option value="1" selected>1x</option>
+                <option value="2">2x</option>
+                <option value="3">3x</option>
+                <option value="4">4x</option>
+            </select>
+            <button type="submit">Submit ✅</button>
+        </form>
+
+        <div class="ingredients">
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>🥑 Avocados: <strong>3 large ripe</strong></li>
+                <li>🫒 Olive oil: <strong>4 tbsp</strong></li>
+                <li>🍋 Lime or lemon juice: <strong>6 tbsp</strong></li>
+                <li>🧄 Garlic: <strong>2 medium cloves</strong></li>
+                <li>🧅 Red onion: <strong>1/2 small</strong></li>
+                <li>🍅 Cherry tomatoes: <strong>6</strong></li>
+                <li>🌿 Fresh cilantro: <strong>a large handful</strong></li>
+                <li>🧂 Salt: <strong>1/2 tsp</strong></li>
+                <li>⚫ Black pepper: <strong>a generous pinch</strong></li>
+            </ul>
+        </div>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const portions = params.get("portions") || 1;
+            const factor = parseInt(portions);
+
+            const baseQuantities = [3, 4, 6, 2, 0.5, 6, 1, 0.5, 1];
+            const unit = ["large ripe", "tbsp", "tbsp", "medium cloves", "small", "", "large handful", "tsp", "generous pinch"];
+            const ingredientsList = document.querySelectorAll('.ingredients li strong');
+
+            ingredientsList.forEach((ingredient, index) => {
+                const newQuantity = (baseQuantities[index] * factor).toFixed(1);
+                ingredient.textContent = `${newQuantity} ${unit[index]}`;
+            });
+        </script>
+    </div>
+</body>
+</html>
