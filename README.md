@@ -55,7 +55,7 @@ In short, feature flags are your secret ingredient for smoother launches, happie
     python main.py
     ```
 
-5. Navigate to http://127.0.0.1:5000/ and enjoy your digital guacamole experience.
+5. Navigate to http://127.0.0.1:5000/ and enjoy your digital guacamole experience. Play with feature flag - change the value and refresh the website.
 
 ## 👩‍🍳 Recipe for Success
 
