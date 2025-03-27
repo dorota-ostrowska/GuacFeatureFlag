@@ -4,54 +4,32 @@ Welcome to **GuacFeatureFlag**, the most _delicious_ way to demonstrate feature 
 
 ## 🧩 What Are Feature Flags?
 
-A feature flag is a software development tool used to safely activate or deactivate features without modifying the source code or performing a new deployment.
+A feature flag is a software development tool used to safely activate or deactivate features without modifying the source code or performing a new deployment. It’s the software world’s equivalent of adding cilantro to only half the guac because your weird cousin hates it. 🌱
 
-Feature flags are typically used in conditional statements (e.g., if-else) to determine which code path will be executed.
+Feature flags are typically used in conditional statements (e.g., if-else) to determine which code path will be executed. Traditionally, feature flags return a boolean value: true or false. 
 
-Think of it like adding ingredients to your guacamole:
+Here’s what feature flags can do for your app (and your stress levels):
 
-* You can add cilantro or skip it entirely, depending on who’s eating.
-* You don’t need to remake the entire guac (or redeploy your app) to make this adjustment.
+* **Experiment Safely**: Test in production without throwing all the chips in at once.
+* **Progressive Rollouts**: Monitor performance and feedback before a full release - add features bit by bit, like taste-testing before serving the guac to the crowd.
+* **Easy Reversals**: Accidentally make it too spicy? Roll back without needing a whole new batch of code.
 
-    ![alt text](diagram-cilantro.png)
-
-    pseudocode:
-
-    ```Python
-    Ania(Eater):
-        likes_cilantro: bool = False
-
-    Kamil(Eater):
-        likes_cilantro: bool = True
-    ```
-
-    ```Python
-    if user.likes_cilantro:
-        show_cilantro_in_recipe()
-    ```
-
-### Why Feature Flags?
-
-Their true power lies in the ability to:
-
-* Decide at runtime which functionality is executed.
-* Customize decisions at the user or request level, not just globally.
-
-This allows you to:
-
-* Safely experiment in production.
-* Monitor performance and feedback before a full release.
-* Roll out features progressively to avoid unexpected "spicy surprises" in your application. 🌶️
-
-Just like the perfect guac recipe, feature flags allow you to experiment, adjust, and serve up only what works best.
+In short, feature flags are your secret ingredient for smoother launches, happier users, and less developer heartburn.
 
 ## 📋 Features
 
 * **Dynamic Ingredients Scaling**: Adjust the guacamole recipe for 1 to 4 servings (or just eat it all yourself—no judgment).
 * **Feature Flag Demo**: Learn how feature flags work using our recipe as an example. Add cilantro? Toggle it! Extra chili? Done!
 * **Minimalist Setup**: Built using Flask and plain HTML—no fancy JavaScript frameworks, just simple and tasty code.
-  
-  ![alt text](diagram-flags.png)
+
+
+**Simple application displaying a recipe**:
+
+![alt text](recipe-simple.png)
+
+**More 'sophisticated' application displaying a recipe and allowing dynamically ingredients scaling**:
+
+![alt text](recipe-with-form.png)
 
 ## 🚀 How to Get Started
 
