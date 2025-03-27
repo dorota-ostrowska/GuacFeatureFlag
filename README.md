@@ -22,7 +22,6 @@ In short, feature flags are your secret ingredient for smoother launches, happie
 * **Feature Flag Demo**: Learn how feature flags work using our recipe as an example. Add cilantro? Toggle it! Extra chili? Done!
 * **Minimalist Setup**: Built using Flask and plain HTML—no fancy JavaScript frameworks, just simple and tasty code.
 
-
 **Simple application displaying a recipe**:
 
 ![alt text](recipe-simple.png)
@@ -48,13 +47,15 @@ In short, feature flags are your secret ingredient for smoother launches, happie
     pip install -r requirements.txt
     ```
 
-3. Run the app:
+3. Set up AppConfig in AWS (or different cloud provider). Laer on I set up credentials in CLI on my PC to use the resources.
+
+4. Run the app:
 
     ```bash
     python main.py
     ```
 
-4. Navigate to http://127.0.0.1:5000/ and enjoy your digital guacamole experience.
+5. Navigate to http://127.0.0.1:5000/ and enjoy your digital guacamole experience.
 
 ## 👩‍🍳 Recipe for Success
 

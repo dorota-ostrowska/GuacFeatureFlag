@@ -13,7 +13,7 @@ logger = logging.getLogger("RecipeLogger")
 recipe = Blueprint("recipe", __name__, template_folder="templates")
 
 os.environ['AWS_DEFAULT_REGION'] = 'eu-north-1'
-appconfig = AppConfigHelper(
+appconfig = AppConfigHelper(  # privide your own settings for the resource - in this case for AppConfig
     "GuacFeatureFlag",
     "dev",
     "doros",
